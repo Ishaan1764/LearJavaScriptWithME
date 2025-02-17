@@ -1,4 +1,12 @@
-//TODO: Tyoe Conversions.
+//TODO: Type Conversions.
+
+// Why Should You Care About Type Conversion?
+// Type conversion can lead to unexpected bugs if not handled properly.
+console.log([] == false);   // true  🤯 (Empty array is coerced to false)
+console.log("5" * 2);       // 10 (String is converted to a number)
+console.log(null + 1);      // 1 (null is treated as 0)
+console.log(undefined + 1); // NaN (undefined results in Not-a-Number)
+
 
 // Have u ever wondered !!
 console.log(10 + "5");  // "105"  (Wait, what?!)
