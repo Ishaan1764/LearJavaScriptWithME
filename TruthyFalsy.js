@@ -61,3 +61,27 @@ if ({}) console.log("Truthy!");   // ✅ Runs (Empty object is truthy)
 
     { } == false // ❌ false (Objects are always truthy)
  */
+
+//WHERE IT MATTERS?
+
+let username = "";  // Simulating an empty input
+
+if (!username) {
+  console.log("Please enter your username.");  // Runs since "" is falsy
+}
+
+//2. Validating API Responses
+const userData = null;
+
+if (!userData) {
+  console.log("No user data available.");  // ✅ Runs if the API returns null or undefined
+} else {
+  console.log(`User: ${userData.name}`);
+}
+
+// 3. Handling Default Values
+let userInput = "";
+let usernae = userInput || "Guest";
+
+console.log(`Welcome, ${usernae}`);  // ✅ Outputs: "Welcome, Guest"
+
